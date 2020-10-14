@@ -1,17 +1,23 @@
 # Getting Started with Terraform
 
-Terraform is the most popular langauge for defining and provisioning infrastructure as code (IaC).
+This document explains how to install and configure Terraform.
 
-To install Terraform, simply visit [Terraform.io](https://www.terraform.io/downloads.html) and download the compressed binary application executable file deliverable for your platform, machine or environment on which you like to run code and do development.
+## Prerequisites
 
-With Terraform installed, let's dive right into it and start creating some infrastructure.
+- An application that can extract zip files.
+- A text editor application.
 
-Most guys find it easiest to create a new directory on there local machine and create Terraform configuration code inside it.
+## Download and Install Terraform
 
-```shell
-$ mkdir terraform-demo
-$ cd terraform-demo
-```
+Download Terraform by visiting [Terraform.io] and selecting the binary file for your operating system.
+
+Extract the Terraform zip file into a new directory on your machine. For this tutorial, we recommend putting your Terraform configuration code inside this directory.
+
+## Create Terraform Configuration Files
+
+The following commands are written for the Linux shell.
+
+Open a shell prompt and navigate to the Terraform directory you created in the previous step.
 
 Next, create a file for your Terraform configuration code.
 
@@ -19,7 +25,7 @@ Next, create a file for your Terraform configuration code.
 $ touch main.tf
 ```
 
-Paste the following lines into the file.
+Copy and paste the following lines into the file using your preferred text editor.
 
 ```hcl
 provider "docker" {
@@ -40,19 +46,19 @@ resource "docker_image" "nginx" {
 }
 ```
 
-Initialize Terraform with the `init` command. The AWS provider will be installed. 
+Initialize Terraform with the `init` command. The AWS provider will be installed.
 
 ```shell
 $ terraform init
 ```
 
-You shoud check for any errors. If it ran successfully, provision the resource with the `apply` command.
+You should check for any errors and correct them before proceeding. If it ran successfully, provision the resource with the `apply` command.
 
 ```shell
 $ terraform apply
 ```
 
-The command will take up to a few minutes to run and will display a message indicating that the resource was created.
+The apply command will take a few minutes to run. If it is successful, it will display a message that the resource was created.
 
 Finally, destroy the infrastructure.
 
@@ -60,4 +66,12 @@ Finally, destroy the infrastructure.
 $ terraform destroy
 ```
 
-Look for a message are the bottom of the output asking for confirmation. Type `yes` and hit ENTER. Terraform will destroy the resources it had created earlier.
+Terraform will prompt you for confirmation. Type `yes` and press ENTER. Terraform will destroy the resources it created earlier.
+
+## Next steps
+
+In this tutorial, you learned how to create and destroy cloud services using Terraform. Save time and money with infrastructure as code. Visit our [Build Infrastructure] tutorial to learn more.
+
+[Terraform.io]: https://www.terraform.io/downloads.html
+
+[Build Infrastructure]: https://learn.hashicorp.com/tutorials/terraform/aws-build?in=terraform/aws-get-started
