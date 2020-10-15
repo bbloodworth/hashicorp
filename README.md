@@ -80,8 +80,8 @@ $ terraform init
 > You may now begin working with Terraform. Try running "terraform plan" to see any changes that are required for your infrastructure. All Terraform commands should now work.
 >
 > If you ever set or change modules or backend configuration for Terraform, rerun this command to reinitialize your working directory. If you forget, other commands will detect it and remind you to do so if necessary.
->
->You should check for any errors and correct them before proceeding.
+
+You should check for any errors and correct them before proceeding.
 
 ## Resource Provisioning
 
@@ -155,9 +155,8 @@ Resource actions are indicated with the following symbols:
 > Only 'yes' will be accepted to approve.
 >
 > Enter a value:
->
-> Terraform will prompt you for confirmation before proceeding.  
-> Type `yes` and press ENTER.
+
+Terraform will prompt you for confirmation before proceeding. Type `yes` and press ENTER.
 
 The `apply` command will take a few minutes to run. If it is successful, it will display a message that the resource was created.
 
@@ -270,7 +269,7 @@ Terraform will prompt you for confirmation before proceeding. Type `yes` and pre
 > docker_image.nginx: Destroying... [id=sha256:f35646e83998b844c3f067e5a2cff84cdf0967627031aeda3042d78996b68d35nginx:latest]  
 > docker_image.nginx: Destruction complete after 0s
 >
->Destroy complete! Resources: 2 destroyed.
+> Destroy complete! Resources: 2 destroyed.
 
 ## Next steps
 
