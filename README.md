@@ -100,10 +100,9 @@ Resource actions are indicated with the following symbols:
 >
 >Terraform will perform the following actions:
 >
-> \# docker_container.nginx will be created
->
 > ```hcl
->    + resource "docker_container" "nginx" {
+> # docker_container.nginx will be created
+> + resource "docker_container" "nginx" {
 >      + attach           = false
 >      + bridge           = (known after apply)
 >      + command          = (known after apply)
@@ -140,12 +139,9 @@ Resource actions are indicated with the following symbols:
 >          + protocol = "tcp"
 >        }
 >    }
-> ```
 >
-> \# docker_image.nginx will be created
->
-> ```hcl
->  + resource "docker_image" "nginx" {
+> # docker_image.nginx will be created  
+> + resource "docker_image" "nginx" {
 >      + id     = (known after apply)
 >      + latest = (known after apply)
 >      + name   = "nginx:latest"
@@ -191,7 +187,7 @@ $ terraform destroy
 >
 > ```hcl
 > # docker_container.nginx will be destroyed
->  - resource "docker_container" "nginx" {
+> - resource "docker_container" "nginx" {
 >      - attach            = false -> null
 >      - command           = [
 >          - "nginx",
